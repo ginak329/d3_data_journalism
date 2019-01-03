@@ -35,16 +35,6 @@ var margin = {
         console.log(data.smokes)
         console.log(data.age)
     });
-//   d3.csv("assets/data/data.csv", function(censusData){
-//       console.log(censusData);
-//     //   console.log(censusData);
-//     //   if (error) throw error;
-//       Object.keys(censusData).forEach(function(data){
-//     //   censusData.forEach(function(data){
-//           data.age=+data.age;
-//           data.smokes=+data.smokes;
-//           console.log(data);
-//       });
 
 var xLinearScale = d3.scaleLinear().range([0, width]);
 var yLinearScale = d3.scaleLinear().range([height,0]);
@@ -101,12 +91,6 @@ var toolTip = d3.tip()
        .append("text")
        .attr("cx",d=>xLinearScale(d[bottomAxis]))
        .attr("cy",d=>yLinearScale(d[leftAxis]))
-    //    .attr("cx", function (data,index) {
-    //     return xLinearScale(data[bottomAxis]);
-    // })
-    // .attr("cy", function (data,index) {
-    //     return yLinearScale(data[leftAxis]);
-    // })
        .attr("text-anchor", "middle")
        .attr("font-size", "12px")
        .attr("class", "stateText")
@@ -136,6 +120,4 @@ var toolTip = d3.tip()
        .attr("class", "axisText")
        .text("Age");
 
-
-//   .text(data.abbr)
   });
